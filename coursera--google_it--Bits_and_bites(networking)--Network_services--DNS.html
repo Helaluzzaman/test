@@ -1,0 +1,16 @@
+<!doctype html><html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>DNS</title>
+  <meta name="generator" content="CherryTree">
+  <link rel="stylesheet" href="res/styles3.css" type="text/css" />
+  
+    <script type="text/javascript">
+        function in_frame () { try { return window.self !== window.top; } catch (e) { return true; } }
+        if (!in_frame()) {
+            var page = location.pathname.substring(location.pathname.lastIndexOf("/") + 1);
+            window.location = 'index.html#' + page;
+        }
+    </script>
+</head>
+<body><div class="page"><h1 class="title">DNS</h1><br/>DNS(Domain name server) is a global and highly distributed network service that resolves strings of letters into IP address. DNS uses UDP instead of TCP, but in complex situation DNS uses <br /><br /> DNS over TCP does in fact exist and is also in use all over. As the Web has gotten more complex, it's no longer the case that all DNS lookup responses can fit in a single UDP datagram. In these situations, a DNS name server would respond with a packet explaining that the response is too large. The DNS client would then establish a TCP connection in order to perform the lookup.<br /><br />A domain name is the term we use for something that can be resolved by DNS.<br /><br /><span style="color:#ff0090;">Name Resolution</span><span style="color:#fffb00;">:  </span><span style="color:#65ff00;">This process of using DNS to turn a domain name into an IP address is known as name resolution.</span> <br /><br />Anycast: Anycast is a technique that's used to route traffic to different destinations depending on factors like location, congestion, or link health<br /><br /><span style="color:#ff00a1;">TTL</span> in <span style="color:#ff00cf;">DNS</span>: This is a value of time in seconds that can be configured by the owner of the domain name for how long a name server is allowed to cache an entry before it discard it and perform a full resolution again.<br /><br /><br />There are five types of DNS server:<br />• caching name servers, <br />• recursive name servers, <br />• root name servers, (13) <br />• TLD name servers (top lever domain) , and <br />• authoritative name servers<br /><br />Now there are not actually 13 physical root name servers anymore rather 13 authorities that provide root name server lookup as a service.(using Anycast)<br /><br />Caching and recursive name server are provided by ISP or local network provider.<br /><br />For each TLD there is a TDL server. ( not necessary to be a physical name server)<br /><br />Most important task is full recursive resolution:<br />1. Go to Root name server<br />2. root server refer to a certain TLD name server<br />3. TLD name server refer to authoritative name server<br />4. Authoritative name server provide the actual IP address of the requested domain name.</div></body></html>

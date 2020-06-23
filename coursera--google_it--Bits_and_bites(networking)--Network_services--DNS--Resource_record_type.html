@@ -1,0 +1,16 @@
+<!doctype html><html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>Resource record type</title>
+  <meta name="generator" content="CherryTree">
+  <link rel="stylesheet" href="res/styles3.css" type="text/css" />
+  
+    <script type="text/javascript">
+        function in_frame () { try { return window.self !== window.top; } catch (e) { return true; } }
+        if (!in_frame()) {
+            var page = location.pathname.substring(location.pathname.lastIndexOf("/") + 1);
+            window.location = 'index.html#' + page;
+        }
+    </script>
+</head>
+<body><div class="page"><h1 class="title">Resource record type</h1><br/><span style="color:#ff00aa;">A record</span>: An A record is used to point a certain domain name at a certain IPv4 IP address.<br /><br /><span style="color:#65ff00;">DNS round robin </span>: If a domain name has multiple a record ( Ip address), ip addresses will be given to resolver computer in round robin pattern.<br />It is called DNS round robin logic. It is to be used to balance between multiple IPs those are resolved to a domain name.<br /><br /><span style="color:#ff00aa;">Quad A record</span>: It is like A record but it works with IPv6 address. It is becoming more and more popular.<br /><br /><span style="color:#ff00aa;">CNAME</span>:  stands canonical name. It redirects traffic to one domain to another domain.<br /><small><br />Explanation of cname : Let's say that Microsoft runs their web servers at www.microsoft.com. They also want to make sure that anyone that enters just microsoft.com into their web browser will get properly redirected. By configuring a CNAME record for microsoft.com that resolves to www.microsoft.com, the resolving client would then know to perform another resolution attempt, this time for www.microsoft.com, and then use the IP returned by that second attempt. </small><br /><br /><span style="color:#ff00aa;">MX record</span> stands for Mail Exchange record.<br /><small>Explanation: Many companies run their web and mail servers on different machines with different IPs, so the MX record makes it easy to ensure that email gets delivered to a company's mail server, while other traffic like web traffic would get delivered to their web server. </small><br /><br /><span style="color:#ff00aa;">SRV record</span> - stands for service record. It is like MX record but it works for any service not only like MX record which only for mail service.<br /><br /><span style="color:#ff00aa;">TXT record</span> <br />Pointer resource record (PTR) : resolves an IP to a domain name. ( Reverse of A record)</div></body></html>

@@ -1,0 +1,16 @@
+<!doctype html><html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>Verifiying connection</title>
+  <meta name="generator" content="CherryTree">
+  <link rel="stylesheet" href="res/styles3.css" type="text/css" />
+  
+    <script type="text/javascript">
+        function in_frame () { try { return window.self !== window.top; } catch (e) { return true; } }
+        if (!in_frame()) {
+            var page = location.pathname.substring(location.pathname.lastIndexOf("/") + 1);
+            window.location = 'index.html#' + page;
+        }
+    </script>
+</head>
+<body><div class="page"><h1 class="title">Verifiying connection</h1><br/>ICMP - Internet Control Message Protocol ICMP is used to communicate these issues.<br />PING - Ping lets you send a special type of ICMP message called an Echo Request.<br /><br /><span style="color:#65ff00;">ICMP message's anatomy:</span> <br /><img src="images\365-1.png" alt="images\365-1.png" /><br />It is not built for human interaction rather it automatically generate in router and computer<br />Ping is for human interaction.<br /><br />Traceroute: <br />for linux / macos command : traceroute ( ip or address)<br />for windows command : tracert ( ip or address)<br /><br />Alternative of traceroute: mtr for linux/ macOS ; pathping for windows.<br /><br /><span style="color:#65ff00;">(When the TTL field reaches zero, the packet is discarded and an </span><span style="color:#ff0090;">ICMP Time Exceeded message</span><span style="color:#65ff00;"> is sent back to the originating host. knowing this thing is important to understand traceroute)</span><br /><br />Traceroute's working method:  Traceroute uses the TTL field by first setting it to one for the first packet, then two for the second, three for the third and so on. By doing this clever little action, traceroute makes sure that the very first packet sent will be discarded by the first router hop. This results in an ICMP Time Exceeded message, the second packet will make it to the second router, the third will make it to the third, and so on. This continues until the packet finally makes it all the way to its destination. For each hop, traceroute will send three identical packets. <br /></div></body></html>

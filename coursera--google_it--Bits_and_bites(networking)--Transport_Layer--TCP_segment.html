@@ -1,0 +1,16 @@
+<!doctype html><html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>TCP segment</title>
+  <meta name="generator" content="CherryTree">
+  <link rel="stylesheet" href="res/styles3.css" type="text/css" />
+  
+    <script type="text/javascript">
+        function in_frame () { try { return window.self !== window.top; } catch (e) { return true; } }
+        if (!in_frame()) {
+            var page = location.pathname.substring(location.pathname.lastIndexOf("/") + 1);
+            window.location = 'index.html#' + page;
+        }
+    </script>
+</head>
+<body><div class="page"><h1 class="title">TCP segment</h1><br/>It is like ethernet frame (in data link layer) or IP datagram ( In network layer)<br />Anatomy of TCP segment:<br /><img src="images\325-1.png" alt="images\325-1.png" /><br /><span style="color:#ff00a1;">Control flag</span> has 6 flag and are called TCP control flag (100110) : Urg(urgent), ack (acknowledgement), psh (Push), rst(Reset), syn (Synchronize), fin (Finish)<br />• URG<br />• ACK <br />• PSH<br />• RST<br />• SYN <br />• FIN<br /><br /><span style="color:#ff00a1;">ACK</span> detail : Acknowledgement number field should be examined.<br /><span style="color:#ff00a1;">SYN</span> detail : It's used when first establishing a TCP connection and makes sure the receiving end knows to examine the sequence number field .<br /><span style="color:#ff00a1;">PSH </span>(push) detail: This means, that the transmitting device wants the receiving device to push currently- buffered data to the application on the receiving end as soon as possible.This is for sending small amount of information which should not be buffered and needs imediate response and so getting imediate response from receiver.<br /><br />TCP connection establishment: (<span style="color:#65ff00;">three way hand-shake</span>)<br />&gt; syn (000010)<br />&lt; syn/ack (010010)<br />&gt; ack(010000)<br /><br />TCP connection closing : (<span style="color:#65ff00;">Four way Hand-shake</span>)<br />&gt; fin (000001)<br />&lt; ack (010000)<br />&lt; fin (000001)<br />&gt; ack(010000)<br /></div></body></html>

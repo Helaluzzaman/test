@@ -1,0 +1,16 @@
+<!doctype html><html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>Socket state</title>
+  <meta name="generator" content="CherryTree">
+  <link rel="stylesheet" href="res/styles3.css" type="text/css" />
+  
+    <script type="text/javascript">
+        function in_frame () { try { return window.self !== window.top; } catch (e) { return true; } }
+        if (!in_frame()) {
+            var page = location.pathname.substring(location.pathname.lastIndexOf("/") + 1);
+            window.location = 'index.html#' + page;
+        }
+    </script>
+</head>
+<body><div class="page"><h1 class="title">Socket state</h1><br/><span style="text-decoration:underline;">Socket</span>: A socket is the instantiation of an endpoint in a potential TCP connection.<br />Here An instantiation is the actual implementation of something defined elsewhere.<br /><br /><span style="text-decoration:underline;">Socker states:</span><br /><br /><span style="color:#ff00a1;">LISTEN</span>. Listen means that a TCP socket is ready and listening for incoming connections.<br /><br /><span style="color:#ff00a1;">SYN_SENT</span>. This means that a synchronization request has been sent, but the connection hasn't been established yet.<br /><br /><span style="color:#ff00a1;">SYN_RECEIVED</span>. This means that a socket previously in a listener state, has received a synchronization request and sent a SYN_ACK back. But it hasn't received the final ACK from the client yet. You'd see this on the server side only. <br /><br /><span style="color:#ff00a1;">ESTABLISHED</span>. This means that the TCP connection is in working order, and both sides are free to send each other data.<br /><br /><span style="color:#ff00a1;">FIN_WAIT</span>. This means that a FIN has been sent, but the corresponding ACK from the other end hasn't been received yet.<br /><br /><span style="color:#ff00a1;">CLOSE_WAIT</span>. This means that the connection has been closed at the TCP layer, but that the application that opened the socket hasn't released its hold on the socket yet. <br /><br /><span style="color:#ff00a1;">CLOSED</span>. This means that the connection has been fully terminated, and that no further communication is possible. <br /><br />Note : socker states name can vary from operation system to operation system.</div></body></html>

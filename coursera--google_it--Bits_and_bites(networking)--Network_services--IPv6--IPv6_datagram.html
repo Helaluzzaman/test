@@ -1,0 +1,16 @@
+<!doctype html><html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>IPv6 datagram</title>
+  <meta name="generator" content="CherryTree">
+  <link rel="stylesheet" href="res/styles3.css" type="text/css" />
+  
+    <script type="text/javascript">
+        function in_frame () { try { return window.self !== window.top; } catch (e) { return true; } }
+        if (!in_frame()) {
+            var page = location.pathname.substring(location.pathname.lastIndexOf("/") + 1);
+            window.location = 'index.html#' + page;
+        }
+    </script>
+</head>
+<body><div class="page"><h1 class="title">IPv6 datagram</h1><br/><img src="images\376-1.png" alt="images\376-1.png" /><br />Version:(4 bit) define what version of ip is in use.<br />class   : (8 bit) It is traffic class field. It indicates the type of traffic contained within the ip datagram.<br />Flow level (20 bit): it is used conjunction with class field for router to <br /><br />transcription: field for routers to make decisions about the quality of service level for a specific datagram. Next you have the payload length field. This is a 16-bit field that defines how long the data payload section of the datagram is. Then you have the next header field. This is a unique concept to IPv6, and needs a little extra explanation. IPv6 addresses are four times as long as IPv4 addresses. That means they have more ones and zeros, which means that they take longer to transmit across a link. To help reduce the problems with additional data that IPv6 addresses impose on the network, the IPv6 header was built to be as short as possible. One way to do that is to take all of the optional fields and abstract them away from the IPv6 header itself. The next header field defines what kind of header is immediately after this current one. These additional headers are optional, so they're not required for a complete IPv6 datagram. Each of these additional optional headers contain a next header field and allow for a chain of headers to be formed if there's a lot of optional configuration. Next we have what's called the hop limit field. This is an 8-bit field that's identical in purpose to the TTL field in an IPv4 header. Finally, we have the source and destination address fields, which are each a 128 bits. If the next header field specified another header, it would follow at this time. If not, a data payload the same length as specified in the payload length field would follow. </div></body></html>

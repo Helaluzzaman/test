@@ -1,0 +1,16 @@
+<!doctype html><html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>Quiz's Answer for network model</title>
+  <meta name="generator" content="CherryTree">
+  <link rel="stylesheet" href="res/styles3.css" type="text/css" />
+  
+    <script type="text/javascript">
+        function in_frame () { try { return window.self !== window.top; } catch (e) { return true; } }
+        if (!in_frame()) {
+            var page = location.pathname.substring(location.pathname.lastIndexOf("/") + 1);
+            window.location = 'index.html#' + page;
+        }
+    </script>
+</head>
+<body><div class="page"><h1 class="title">Quiz's Answer for network model</h1><br/>Firstly the sender(1) node sends a syn message to the receiver(2) node. For sending a syn message client node's web browser communicates with the local networking stack to build a TCP segment with SYN flag is set and with a source port and destination port. A sequence number is chosen and is used to fill in the sequence number field and also a checksum for the TCP segment is calculated and written in checksum field. As the receiving node is on another network, so the date should go to gateway. TCP segment goes to IP layer of networking stack. This construct the IP header filled with source IP, destination IP , TTL as 64. The TCP segment is inserted as the data payload for ip datagram then a checksum is calculated for whole thing. Then sender node needs to get this to its gateway. After knowing the Mac address of the gateway by sending an arp request to it's network. It creates an Ethernet frame with the source and destination (gateway ) Mac address.Then the IP datagram is inserted as the data payload of the Ethernet frame and another checksum is calculated. Then the Ethernet frame goes to the switch of the network through physical layer such as cat 6 cables or fiber cables. After inspecting the destination mac address, switch forward the Ethernet frame to the gateway router. Router receive the frame as the destination address matches to it's hardware address. then the router calculates a checksum against it, after making sure data integrity it strips away the frame and sees the destination IP and performs a lookup of the destination in its routing table. After getting the destination network in the routing table. It decrement the TTL by 1 and calculates a new checksum and creates a new IP Datagram. this new IP Datagram is encapsulated by a new Ethernet frame filling destination Mac address of the receiver node.Calculates a checksum and place this checksum into the place. Then the frame goes to destination network's switch. This switch forward the frame to the receiver node. Finally the syn message arrives to receiver node. Then the receiver node sees that this packet has the SYN flag set. So it examines the sequence number and stores that, since it'll need to put that sequence number in the acknowledgement field once it crafts the response. Then in the same way receiver node sends SYN-ACK response to sender node and everything happens again. Then sender node sends an ACK message to receiver node. Finally TCP connection establishes between two nodes of two different networks connected with same router.</div></body></html>

@@ -1,0 +1,16 @@
+<!doctype html><html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>IPv6</title>
+  <meta name="generator" content="CherryTree">
+  <link rel="stylesheet" href="res/styles3.css" type="text/css" />
+  
+    <script type="text/javascript">
+        function in_frame () { try { return window.self !== window.top; } catch (e) { return true; } }
+        if (!in_frame()) {
+            var page = location.pathname.substring(location.pathname.lastIndexOf("/") + 1);
+            window.location = 'index.html#' + page;
+        }
+    </script>
+</head>
+<body><div class="page"><h1 class="title">IPv6</h1><br/>Undecillion <br />IPv4 is a 32 bit number.But IPv6 is 128 bit number.<br />IPv6 are written out as 8 groups of 16 bits each. Each one of these groups is further made up of four hexadecimal numbers.<br /><br />example:<br />Reserved Addresses:<br />2001:0db8 is reserved for documentation and education or books and courses. There is 18 quintillion addresses.<br /><img src="images\375-1.png" alt="images\375-1.png" /><br />2001:0db8:0000:0000:0000:ff00:0012:345<br />2001: db8:    0:    0:    0:ff00:   12:345 (appliying first rule)<br />2001:db8::ff00:12:345                        ( appliying second rule)<br />  <br />loop back address:<br />In Ipv4 It was 127.0.0.1 . But is Ipv6: 31 zeros and 1 in the end:<br /><img src="images\375-2.png" alt="images\375-2.png" />   <br /><span style="color:#65ff00;">::1</span><br />Multicast:  FF00::<br />Link local unicast : FE80::<br />(Link-local unicast addresses allow for local network segment communications and are configured based upon a host's MAC address. The link-local address are used by an IPv6 host to receive their network configuration, which is a lot like how DHCP works. The host's MAC address is run through an algorithm to turn it from a 48-bit number into a unique 64-bit number. It's then inserted into the address's host ID. )<br /><br />Notation method ( For making IPv6 address more readable for human, for shortening )<br />1. You can remove any leading zeros from a group.<br />2. Any number of consecutive groups composed of just zeros can be replaced with two colons. This can only happen once for any specific address. Otherwise you couldn't know how many zeros were replaced by the double colons.<br /><img src="images\375-3.png" alt="images\375-3.png" /><br /><br />Network Id and Host Id: First 64 bits are Network Id and last 64 bits are Host Id . There is no need of Address classes.<br />So any network has 9 quintillion hosts<br /><img src="images\375-4.png" alt="images\375-4.png" /><br />Subnetting: IPv6 subnetting uses the same CIDR notation that you're already familiar with. This is used to define a subnet mask against the <span style="color:#65ff00;">network ID</span> portion of an IPv6 address. <br /><br /><br /><br /><br /><br /></div></body></html>
